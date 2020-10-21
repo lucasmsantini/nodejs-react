@@ -8,6 +8,7 @@ exports.post = async (repository,validationContract,req,res)=>{
         }
         let resultado = await repository.create(data,req);
         res.status(201).send(resultado);
+        
     } catch (e) {
         console.log(e);
         res.status(500).send({message:"Internal server error", error: e});
