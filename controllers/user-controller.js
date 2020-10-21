@@ -72,7 +72,7 @@ userController.prototype.authenticate = async (req,res) => {
     _validationContract.isEmail(req.body.email, "Email inválido. ");
     if (!_validationContract.isValid()){
         res.status(400).send({message:"Não foi possível efetuar o login",validation: _validationContract.errors()
-    });
+    })
     return
     }
     let usuarioEncontrado = await _repo.authenticate(req.body.email, req.body.senha, false);
