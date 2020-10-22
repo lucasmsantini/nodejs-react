@@ -1,6 +1,6 @@
 'user strict';
 
-const repository = require('../repositories/user-repository.js');
+const repository = require('../repositories/user-repository');
 const validation = require('../bin/helpers/validation.js');
 const ctrlBase = require('../bin/base/controller-base.js');
 const bcrypt = require('bcrypt');
