@@ -55,7 +55,7 @@ exports.delete = async (repository,validationContract,req,res)=>{
            res.status(500).send({message:"O parâmetro ID precisa ser informado - delete"});
        }
     } catch (e) {
-        console.log(e);=
+        console.log(e);
         res.status(500).send({message:"Internal server error - delete", error: e});
     }
 }
